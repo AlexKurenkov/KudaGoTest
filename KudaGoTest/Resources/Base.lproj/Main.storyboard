@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NDe-vS-jGc">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--KudaGO-->
+        <scene sceneID="c8m-BL-k9X">
+            <objects>
+                <tableViewController id="R0z-c6-TFm" customClass="MainTableViewController" customModule="KudaGoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gT4-Ox-cP5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableViewCellIdentifier" rowHeight="396" id="Txj-j7-dVp" customClass="MainTableViewCell" customModule="KudaGoTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="396"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Txj-j7-dVp" id="P8k-ek-pgU">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="396"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KHy-UJ-LJB" customClass="FilmSmallView" customModule="KudaGoTest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="396"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KHy-UJ-LJB" secondAttribute="trailing" id="D2x-1D-wHL"/>
+                                        <constraint firstAttribute="bottom" secondItem="KHy-UJ-LJB" secondAttribute="bottom" id="GkX-0m-tdi"/>
+                                        <constraint firstItem="KHy-UJ-LJB" firstAttribute="top" secondItem="P8k-ek-pgU" secondAttribute="top" id="IG4-bf-4u7"/>
+                                        <constraint firstItem="KHy-UJ-LJB" firstAttribute="leading" secondItem="P8k-ek-pgU" secondAttribute="leading" id="U74-m5-k2n"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="filmsSmalView" destination="KHy-UJ-LJB" id="fKv-to-h0R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R0z-c6-TFm" id="i6X-rI-saQ"/>
+                            <outlet property="delegate" destination="R0z-c6-TFm" id="u8l-4h-eOo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="KudaGO" id="1SN-Af-Pg7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6f-gA-hO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.60000000000002" y="165.06746626686657"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O7f-Ui-vn5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NDe-vS-jGc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OwU-rA-mol">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R0z-c6-TFm" kind="relationship" relationship="rootViewController" id="3dj-bG-Kmh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9G-8V-jhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="166.74107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
