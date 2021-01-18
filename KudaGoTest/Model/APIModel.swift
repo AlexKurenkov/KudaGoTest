@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - API document find at https://docs.kudago.com/api/
 
-final class FilmsList: Decodable {
+struct FilmsList: Decodable {
     
     public var count    : Int? //
     public var next     : String? //
@@ -18,7 +18,7 @@ final class FilmsList: Decodable {
     
 }
 
-final class Film: Decodable {
+struct Film: Decodable {
     
     public var id               : Int? // идентификатор
     public var stars            : String? // актеры
@@ -33,14 +33,14 @@ final class Film: Decodable {
     public var body_text        : String? // описание
 }
 
-final class Poster: Decodable {
+struct Poster: Decodable {
     
     public var image    : String? //
     public var source   : Source? //
     
 }
 
-final class Source: Decodable {
+struct Source: Decodable {
     
     public var name     : String? //
     public var link     : String? //

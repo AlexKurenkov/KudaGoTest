@@ -21,6 +21,7 @@
 		1F10DA6C25AF83CD00AECC98 /* Double + BudgetFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10DA6B25AF83CD00AECC98 /* Double + BudgetFormatter.swift */; };
 		1F10DA7425AF84D900AECC98 /* Int + timeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10DA7325AF84D900AECC98 /* Int + timeFormatter.swift */; };
 		1F20779825B05DA500836846 /* FilmSmallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F20779725B05DA500836846 /* FilmSmallView.xib */; };
+		1F2077C125B5D9B100836846 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2077C025B5D9B000836846 /* URLManager.swift */; };
 		1FCD11CF25B053B600FF899A /* FilmSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD11CE25B053B600FF899A /* FilmSmallView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		1F10DA6B25AF83CD00AECC98 /* Double + BudgetFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + BudgetFormatter.swift"; sourceTree = "<group>"; };
 		1F10DA7325AF84D900AECC98 /* Int + timeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + timeFormatter.swift"; sourceTree = "<group>"; };
 		1F20779725B05DA500836846 /* FilmSmallView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmSmallView.xib; sourceTree = "<group>"; };
+		1F2077C025B5D9B000836846 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		1FCD11CE25B053B600FF899A /* FilmSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSmallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1F10DA5125AF57FF00AECC98 /* ServerManager.swift */,
+				1F2077C025B5D9B000836846 /* URLManager.swift */,
 			);
 			path = Netwotking;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				1F10DA4825AF57BB00AECC98 /* MainTableViewController.swift in Sources */,
 				1F10DA4F25AF57DB00AECC98 /* DetailViewController.swift in Sources */,
 				1F10DA5D25AF6FC600AECC98 /* APIModel.swift in Sources */,
+				1F2077C125B5D9B100836846 /* URLManager.swift in Sources */,
 				1F10DA6C25AF83CD00AECC98 /* Double + BudgetFormatter.swift in Sources */,
 				1F10DA7425AF84D900AECC98 /* Int + timeFormatter.swift in Sources */,
 				1F10DA4C25AF57CB00AECC98 /* MainTableViewCell.swift in Sources */,
