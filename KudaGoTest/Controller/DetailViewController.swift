@@ -34,6 +34,7 @@ class DetailViewController: UIViewController {
         setupUI(with: film)
     }
     
+    // MARK: - UI Methods
     private func setupScrolView() {
         
         view.addSubview(scrollView)
@@ -83,6 +84,7 @@ class DetailViewController: UIViewController {
         setupContentView(with: film)
     }
     
+    // MARK: - Initialize with external dependencys
     init(film: Film) {
         self.film = film
         super.init(nibName: nil, bundle: nil)

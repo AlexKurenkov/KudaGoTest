@@ -8,7 +8,11 @@
 import UIKit
 
 @IBDesignable class FilmSmallView: UIView {
+    
+    // MARK: - Dependecys
+    private var dataFetcherService = DataFetcherService()
 
+    // MARK: - UI
     @IBOutlet weak private var mainLabel: UILabel!
     @IBOutlet weak private var directorLabel: UILabel!
     @IBOutlet weak private var budgetLabel: UILabel!
@@ -29,27 +33,34 @@ import UIKit
             }
         }
     }
-    // internal variable
+    
+    // MARK: -internal variable
     private var imageURL: URL? {
         didSet {
             posterImageView?.image = nil
             updateUI()
         }
     }
-
+    
     private func updateUI() {
         guard let url = imageURL else { return }
         indicator.startAnimating()
-
-        ServerManager.shared.getPosterImage(from: url) { (image) in
+        
+        dataFetcherService.fetchImageData(from: url.absoluteString) { (image) in
             guard url == self.imageURL else { return }
             self.posterImageView.image = image
             self.indicator.stopAnimating()
-        } onFailure: { (error) in
-            self.posterImageView.image = UIImage(named: "404.png")
-            guard let error = error else { return }
-            print (error.localizedDescription)
         }
+
+//        ServerManager.shared.getPosterImage(from: url) { (image) in
+//            guard url == self.imageURL else { return }
+//            self.posterImageView.image = image
+//            self.indicator.stopAnimating()
+//        } onFailure: { (error) in
+//            self.posterImageView.image = UIImage(named: "404.png")
+//            guard let error = error else { return }
+//            print (error.localizedDescription)
+//        }
     }
     
     private func setup() {
